@@ -1410,116 +1410,114 @@ def add_references(doc):
     """Список использованных источников."""
     add_heading_text(doc, 'СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ', level=1)
 
+    # Русскоязычные источники (алфавитный порядок), затем зарубежные
+    # Оформление по ВАК Республики Беларусь 2020
     references = [
-        'Akyildiz, I.F. Wireless sensor networks: a survey / I.F. Akyildiz, '
-        'W. Su, Y. Sankarasubramaniam, E. Cayirci // Computer Networks. — '
-        '2002. — Vol. 38, No. 4. — P. 393–422.',
+        # --- Русскоязычные ---
+        'Баскаков, С. С. Энергоэффективные протоколы маршрутизации в '
+        'беспроводных сенсорных сетях / С. С. Баскаков, А. В. Пролетарский // '
+        'T-Comm: Телекоммуникации и транспорт. — 2016. — Т. 10, № 11. — '
+        'С. 21–27.',
 
-        'Heinzelman, W.R. Energy-efficient communication protocol for '
-        'wireless microsensor networks / W.R. Heinzelman, A. Chandrakasan, '
-        'H. Balakrishnan // Proceedings of the 33rd Annual Hawaii International '
+        'Вишневский, В. М. Широкополосные беспроводные сети передачи '
+        'информации / В. М. Вишневский, А. И. Ляхов, С. Л. Портной, '
+        'И. В. Шахнович. — М. : Техносфера, 2005. — 592 с.',
+
+        'Воротницкий, Ю. И. QoS маршрутизация в сенсорных сетях / '
+        'Ю. И. Воротницкий, К. С. Шпак // Компьютерные технологии '
+        'и анализ данных (CTDA\'2022) : материалы II Междунар. науч.-практ. '
+        'конф., Минск, 21–22 сент. 2022 г. — Минск : РИВШ, 2022. — '
+        'С. 185–187.',
+
+        'Гольдштейн, Б. С. Сети связи : учебник / Б. С. Гольдштейн, '
+        'Н. А. Соколов, Г. Г. Яновский. — СПб. : БХВ-Петербург, '
+        '2014. — 400 с.',
+
+        'Евсин, В. А. Разработка модуля оптимального размещения '
+        'информационных ресурсов на узлах вычислительной сети: описание '
+        'реализуемых методов и структур данных / В. А. Евсин, '
+        'Н. А. Тихонов, С. П. Воробьёв // Инженерный вестник Дона. — '
+        '2019. — № 1. — С. 1–12.',
+
+        'Кормен, Т. Алгоритмы: построение и анализ / Т. Кормен, '
+        'Ч. Лейзерсон, Р. Ривест, К. Штайн. — 3-е изд. — М. : '
+        'Вильямс, 2013. — 1328 с.',
+
+        'Кучерявый, А. Е. Самоорганизующиеся сети / А. Е. Кучерявый, '
+        'А. В. Прокопьев, Е. А. Кучерявый. — СПб. : Любавич, '
+        '2011. — 312 с.',
+
+        'Лихачёв, А. М. Кластерные протоколы маршрутизации в беспроводных '
+        'сенсорных сетях / А. М. Лихачёв, П. А. Уланов // '
+        'Информационные технологии и системы. — 2020. — № 2. — С. 128–135.',
+
+        'Листопад, Н. И. Маршрутизация в мультисервисных сетях '
+        'телекоммуникаций на основе модифицированного алгоритма '
+        'Дейкстры / Н. И. Листопад, Ю. И. Воротницкий, А. А. Хайдер // '
+        'Вестник БГУ. Серия 1. — 2015. — № 1. — С. 70–76.',
+
+        'Ломакина, Л. С. Многокритериальная оптимизация маршрутов в '
+        'телекоммуникационных сетях / Л. С. Ломакина // Вестник '
+        'Воронежского государственного технического университета. — '
+        '2019. — Т. 15, № 3. — С. 64–71.',
+
+        'Макаренко, С. И. Информационная безопасность : учебное '
+        'пособие / С. И. Макаренко. — Ставрополь : СФ МГГУ '
+        'им. М. А. Шолохова, 2009. — 372 с.',
+
+        'Олифер, В. Г. Компьютерные сети. Принципы, технологии, '
+        'протоколы / В. Г. Олифер, Н. А. Олифер. — 5-е изд. — '
+        'СПб. : Питер, 2016. — 992 с.',
+
+        'Росляков, А. В. Интернет вещей / А. В. Росляков, '
+        'С. В. Ваняшин, А. Ю. Гребешков. — Самара : ПГУТИ, '
+        '2015. — 200 с.',
+
+        'Савенко, О. С. Методы обнаружения аномалий в беспроводных '
+        'сенсорных сетях / О. С. Савенко, С. М. Лосев // Проблемы '
+        'информационных технологий. — 2017. — № 1 (21). — С. 75–82.',
+
+        'Таненбаум, Э. Компьютерные сети / Э. Таненбаум, '
+        'Д. Уэзеролл. — 5-е изд. — СПб. : Питер, 2012. — 960 с.',
+
+        'Шелухин, О. И. Обнаружение вторжений в компьютерные сети '
+        '(сетевые аномалии) / О. И. Шелухин, Д. Ж. Сакалема, '
+        'А. С. Филинова. — М. : Горячая линия — Телеком, 2013. — 220 с.',
+
+        'Шпак, К. С. Оптимальная маршрутизация в мультисервисных '
+        'компьютерных сетях с учётом требований качества обслуживания / '
+        'К. С. Шпак // Информационные радиосистемы и радиотехнологии — '
+        '2020 : материалы науч.-техн. конф. — Минск : БГУИР, 2020. — '
+        'С. 218–219.',
+
+        'Ярмолик, С. Н. Методы маршрутизации в компьютерных сетях / '
+        'С. Н. Ярмолик // Доклады БГУИР. — 2018. — № 7 (117). — С. 46–52.',
+
+        # --- Зарубежные ---
+        'Akyildiz, I. F. Wireless sensor networks: a survey / '
+        'I. F. Akyildiz, W. Su, Y. Sankarasubramaniam, E. Cayirci // '
+        'Computer Networks. — 2002. — Vol. 38, No. 4. — P. 393–422.',
+
+        'Heinzelman, W. R. Energy-efficient communication protocol for '
+        'wireless microsensor networks / W. R. Heinzelman, A. Chandrakasan, '
+        'H. Balakrishnan // Proc. of the 33rd Annual Hawaii International '
         'Conference on System Sciences. — 2000. — P. 1–10.',
 
-        'Intanagonwiwat, C. Directed diffusion: a scalable and robust '
-        'communication paradigm for sensor networks / C. Intanagonwiwat, '
-        'R. Govindan, D. Estrin // Proceedings of ACM MobiCom. — 2000. — P. 56–67.',
+        'Karlof, C. Secure routing in wireless sensor networks: attacks '
+        'and countermeasures / C. Karlof, D. Wagner // Ad Hoc Networks. — '
+        '2003. — Vol. 1, No. 2–3. — P. 293–315.',
 
-        'Karlof, C. Secure routing in wireless sensor networks: attacks and '
-        'countermeasures / C. Karlof, D. Wagner // Ad Hoc Networks. — 2003. — '
-        'Vol. 1, No. 2–3. — P. 293–315.',
-
-        'Kulik, J. Negotiation-based protocols for disseminating information '
-        'in wireless sensor networks / J. Kulik, W.R. Heinzelman, '
-        'H. Balakrishnan // Wireless Networks. — 2002. — Vol. 8. — P. 169–185.',
-
-        'Lindsey, S. PEGASIS: Power-efficient gathering in sensor information '
-        'systems / S. Lindsey, C.S. Raghavendra // Proceedings of IEEE '
-        'Aerospace Conference. — 2002. — Vol. 3. — P. 1125–1130.',
-
-        'Manjeshwar, A. TEEN: A routing protocol for enhanced efficiency in '
-        'wireless sensor networks / A. Manjeshwar, D.P. Agrawal // Proceedings '
-        'of 15th International Parallel and Distributed Processing Symposium. — '
-        '2001. — P. 2009–2015.',
+        'Karp, B. GPSR: greedy perimeter stateless routing for wireless '
+        'networks / B. Karp, H. T. Kung // Proc. of ACM MobiCom. — '
+        '2000. — P. 243–254.',
 
         'Perrig, A. Security in wireless sensor networks / A. Perrig, '
         'J. Stankovic, D. Wagner // Communications of the ACM. — 2004. — '
         'Vol. 47, No. 6. — P. 53–57.',
 
-        'He, T. SPEED: a stateless protocol for real-time communication in '
-        'sensor networks / T. He [et al.] // Proceedings of the 23rd '
-        'International Conference on Distributed Computing Systems. — '
-        '2003. — P. 46–55.',
-
-        'Deng, J. INSENS: Intrusion-tolerant routing for wireless sensor '
-        'networks / J. Deng, R. Han, S. Mishra // Computer Communications. — '
-        '2006. — Vol. 29, No. 2. — P. 216–230.',
-
-        'Marti, S. Mitigating routing misbehavior in mobile ad hoc networks / '
-        'S. Marti [et al.] // Proceedings of ACM MobiCom. — 2000. — P. 255–265.',
-
-        'Karp, B. GPSR: greedy perimeter stateless routing for wireless '
-        'networks / B. Karp, H.T. Kung // Proceedings of ACM MobiCom. — '
-        '2000. — P. 243–254.',
-
-        'Deb, K. A fast and elitist multiobjective genetic algorithm: '
-        'NSGA-II / K. Deb [et al.] // IEEE Transactions on Evolutionary '
-        'Computation. — 2002. — Vol. 6, No. 2. — P. 182–197.',
-
-        'Dorigo, M. Ant colony optimization: a new meta-heuristic / '
-        'M. Dorigo, G. Di Caro // Proceedings of the Congress on Evolutionary '
-        'Computation. — 1999. — Vol. 2. — P. 1470–1477.',
-
-        'Xu, Y. Geography-informed energy conservation for ad hoc routing / '
-        'Y. Xu, J. Heidemann, D. Estrin // Proceedings of ACM MobiCom. — '
-        '2001. — P. 70–84.',
-
-        'Sohraby, K. Wireless sensor networks: technology, protocols, and '
-        'applications / K. Sohraby, D. Minoli, T. Znati. — John Wiley '
-        '& Sons, 2007. — 328 p.',
-
-        'Butun, I. A survey of intrusion detection systems in wireless '
-        'sensor networks / I. Butun, S.D. Morgera, R. Sankar // IEEE '
-        'Communications Surveys & Tutorials. — 2014. — Vol. 16, No. 1. — '
-        'P. 266–282.',
-
-        'da Silva, A.P.R. Decentralized intrusion detection in wireless '
-        'sensor networks / A.P.R. da Silva [et al.] // Proceedings of the '
-        '1st ACM International Workshop on Quality of Service & Security '
-        'in Wireless and Mobile Networks. — 2005. — P. 16–23.',
-
-        'Forster, A. Machine learning techniques applied to wireless '
-        'ad-hoc networks: guide and survey / A. Forster // Proceedings '
-        'of the 3rd International Conference on Intelligent Sensors, '
-        'Sensor Networks and Information. — 2007. — P. 365–370.',
-
-        'Felemban, E. MMSPEED: multipath multi-SPEED protocol for QoS '
-        'guarantee of reliability and timeliness in wireless sensor '
-        'networks / E. Felemban, C.G. Lee, E. Ekici // IEEE Transactions '
-        'on Mobile Computing. — 2006. — Vol. 5, No. 6. — P. 738–754.',
-
-        'Yu, M. A survey on security issues in services communication '
-        'of Microservices-enabled fog applications / M. Yu [et al.] // '
-        'Concurrency and Computation: Practice and Experience. — 2019. — '
-        'Vol. 31, No. 22. — P. e4436.',
-
-        'Vasserman, E.Y. Vampire attacks: draining life from wireless '
-        'ad hoc sensor networks / E.Y. Vasserman, N. Hopper // IEEE '
-        'Transactions on Mobile Computing. — 2013. — Vol. 12, No. 2. — '
-        'P. 318–332.',
-
-        'Newsome, J. The Sybil attack in sensor networks: analysis & '
-        'defenses / J. Newsome [et al.] // Proceedings of the 3rd '
-        'International Symposium on Information Processing in Sensor '
-        'Networks. — 2004. — P. 259–268.',
-
-        'Singh, S.K. A survey on successors of LEACH protocol / '
-        'S.K. Singh, P. Kumar, J.P. Singh // IEEE Access. — 2017. — '
+        'Singh, S. K. A survey on successors of LEACH protocol / '
+        'S. K. Singh, P. Kumar, J. P. Singh // IEEE Access. — 2017. — '
         'Vol. 5. — P. 4298–4328.',
-
-        'Mohammadi, S. A comparison of link quality metrics in the '
-        'design of routing protocols for wireless sensor networks / '
-        'S. Mohammadi, H. Jadidoleslamy // Computer Science Review. — '
-        '2011. — Vol. 5, No. 4. — P. 393–411.',
     ]
 
     for i, ref in enumerate(references, 1):
