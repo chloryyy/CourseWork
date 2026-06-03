@@ -49,12 +49,14 @@
     <ClCompile Include="src\substitution_table.cpp" />
     <ClCompile Include="src\gost28147.cpp" />
     <ClCompile Include="src\modes.cpp" />
+    <ClCompile Include="src\selftest.cpp" />
     <ClCompile Include="app\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\gost\substitution_table.hpp" />
     <ClInclude Include="include\gost\gost28147.hpp" />
     <ClInclude Include="include\gost\modes.hpp" />
+    <ClInclude Include="include\gost\selftest.hpp" />
     <ClInclude Include="include\gost\hex.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
