@@ -16,6 +16,7 @@ add_library(gost_core
     src/substitution_table.cpp
     src/gost28147.cpp
     src/modes.cpp
+    src/selftest.cpp
 )
 target_include_directories(gost_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
