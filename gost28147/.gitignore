@@ -1,0 +1,22 @@
+# Сборка CMake
+build/
+out/
+
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+*.user
+*.sdf
+*.opensdf
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Объектные файлы / бинарники
+*.o
+*.obj
+*.exe
+*.ilk
+*.pdb
